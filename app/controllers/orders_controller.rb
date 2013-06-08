@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   expose(:order)
 
   def index
-    
+    self.orders = orders.where :user => current_user.id
   end
 
   def show
@@ -16,6 +16,8 @@ class OrdersController < ApplicationController
   end
 
   def create
+    order.user = current_user
+
     if order.save
       redirect_to orders_path
     else
