@@ -1,15 +1,13 @@
 Slaska::Application.routes.draw do
   get '/login' => 'sessions#new'
+  get '/logout' => 'sessions#delete'
   get '/auth/github/callback' => 'sessions#create'
   get '/' => 'home#index'
+
   resources :dinners
   resources :orders
-#<<<<<<< HEAD
-#   resources :orders
-# =======
 
 
-# >>>>>>> d996d40a895db6405ca59413a0e177e44cbffe1c
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
