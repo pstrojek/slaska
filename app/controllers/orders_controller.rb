@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_filter :autorization_admin_or_owner, :only => [:edit, :update]
   expose(:dinners)
   expose(:orders) { Order.where user: current_user }
   expose(:order)
@@ -35,6 +36,14 @@ class OrdersController < ApplicationController
       redirect_to orders_path
     else
       render :edit
+    end
+  end
+
+  protected
+  def autorization_admin_or_owner
+    if !current_user.is_admin? && order.user != current_user
+      flash[:error] = "Access Denied"
+      redirect_to :action => 'index'
     end
   end
 end
