@@ -16,6 +16,9 @@ class OrdersController < ApplicationController
   end
 
   def create
+    if params[:form_action] == 'Add'
+      return render :new
+    end
     order.user = current_user
 
     if order.save
@@ -31,6 +34,8 @@ class OrdersController < ApplicationController
   end
 
   def update
+
+
     if order.save
       redirect_to orders_path
     else
