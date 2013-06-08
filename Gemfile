@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.0'
+
 
 gem 'rails', '3.2.13'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
