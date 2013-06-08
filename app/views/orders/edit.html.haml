@@ -1,0 +1,6 @@
+= form_tag order_path(order), method: :put do 
+  = label_tag :name
+  - order.dinners.each_with_index do |d, i|
+    = select_tag "order[dinner_ids][#{i}]", options_from_collection_for_select(dinners.all, "id", "name", d.id)
+  %br
+  = submit_tag
