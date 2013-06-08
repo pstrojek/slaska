@@ -11,7 +11,7 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
-
+require File.expand_path('../preinitializer', __FILE__)
 module Slaska
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
