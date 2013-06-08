@@ -2,4 +2,5 @@
   = o.id
   - o.dinners.each do |d|
     = d.name
+    = link_to 'Edit', edit_order_path(o)
     %br
