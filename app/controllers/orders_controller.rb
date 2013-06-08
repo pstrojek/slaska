@@ -29,4 +29,12 @@ class OrdersController < ApplicationController
   def edit
     
   end
+
+  def update
+    if order.save
+      redirect_to orders_path
+    else
+      render :edit
+    end
+  end
 end
