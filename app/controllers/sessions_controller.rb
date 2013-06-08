@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+skip_before_filter :authorize_user, :only => [:create]
 
 	def new
 		redirect_to '/auth/github'

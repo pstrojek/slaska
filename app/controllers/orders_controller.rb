@@ -1,10 +1,10 @@
 class OrdersController < ApplicationController
   expose(:dinners)
-  expose(:orders)
+  expose(:orders) { Order.where user: current_user }
   expose(:order)
 
   def index
-    
+
   end
 
   def show
@@ -16,6 +16,8 @@ class OrdersController < ApplicationController
   end
 
   def create
+    order.user = current_user
+
     if order.save
       redirect_to orders_path
     else
