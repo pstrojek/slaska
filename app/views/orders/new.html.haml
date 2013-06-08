@@ -1,0 +1,5 @@
+= form_tag orders_path do 
+  = label_tag 'Dinners'
+  = select_tag "order[dinner_ids][]", options_from_collection_for_select(dinners.all, "id", "name")
+  %br
+  = submit_tag
