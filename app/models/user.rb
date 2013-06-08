@@ -4,6 +4,7 @@ class User
   field :name
   field :uid
   field :provider
+  field :admin, type: Boolean, default: false
 
   def self.find_or_create_from_auth_hash(auth_hash)
   	create! do |user|
@@ -11,5 +12,9 @@ class User
         user.uid = auth_hash["uid"]
         user.name = auth_hash["info"]["name"]
     end
+  end
+
+  def is_admin?
+    self.admin
   end
 end

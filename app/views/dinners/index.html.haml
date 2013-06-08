@@ -1,3 +1,5 @@
 - dinners.each do |d|
-  = d.name
-  %br
+  = d.name  
+  - if current_user.is_admin?
+    = link_to 'Edit', edit_dinner_path(d)
+    %br

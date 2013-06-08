@@ -23,4 +23,8 @@ class OrdersController < ApplicationController
     end
     # params[:order][:dinners]
   end
+
+  def edit
+    
+  end
 end
