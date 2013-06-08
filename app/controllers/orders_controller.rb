@@ -1,10 +1,10 @@
 class OrdersController < ApplicationController
   expose(:dinners)
-  expose(:orders)
+  expose(:orders) { Order.where user: current_user }
   expose(:order)
 
   def index
-    self.orders = orders.where :user => current_user.id
+
   end
 
   def show
