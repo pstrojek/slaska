@@ -28,9 +28,8 @@
           %a.brand(href="#") Slaska
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Nasze menu", "/dinners"
+              %li= link_to "Zaloguj się", "/login"
 
     .container-fluid
 
@@ -39,9 +38,8 @@
           .well.sidebar-nav
             %ul.nav.nav-list
               %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Złóż zamówienie", "/orders/create"
+              %li= link_to "Twoje zamówienia", "/orders"
         .span9
           = bootstrap_flash
           = yield
