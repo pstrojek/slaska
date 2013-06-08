@@ -11,8 +11,12 @@ gem 'konf'
 
 gem "mongoid"
 
+gem 'haml-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'therubyracer'
+gem 'less-rails'
+
 gem 'decent_exposure'
-gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.

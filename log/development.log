@@ -1,0 +1,222 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 10:58:08 +0200
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-06-08 10:58:10 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (1.5ms)
+Completed 200 OK in 45ms (Views: 44.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 11:16:11 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-06-08 11:16:12 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (1.3ms)
+Completed 200 OK in 8ms (Views: 7.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 11:50:09 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 11:50:14 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 11:50:14 +0200
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 11:58:06 +0200
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 11:58:11 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 11:58:11 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=3bd18c9fa69be97dac9c5e8beac429edbba71899027af364" for 127.0.0.1 at 2013-06-08 11:58:13 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"3bd18c9fa69be97dac9c5e8beac429edbba71899027af364"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 12:19:06 +0200
+Served asset /rails.png - 304 Not Modified (60ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 12:19:11 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 12:19:11 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=e518b28781b8646364a3a9296ec30a94840d94c4161ab2aa" for 127.0.0.1 at 2013-06-08 12:19:13 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"e518b28781b8646364a3a9296ec30a94840d94c4161ab2aa"}
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 12:24:56 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 12:25:00 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 12:25:00 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=2462168eecc69024e53b651a8cfbcffc50dcd024a0d640de" for 127.0.0.1 at 2013-06-08 12:25:03 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"2462168eecc69024e53b651a8cfbcffc50dcd024a0d640de"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 12:30:31 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 12:30:36 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/github
+Completed 302 Found in 0ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 12:30:36 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=7a077b24a056d6067757a72e9d04a36f7e9148d7678b1c4a" for 127.0.0.1 at 2013-06-08 12:30:41 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"7a077b24a056d6067757a72e9d04a36f7e9148d7678b1c4a"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 12:31:00 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 12:31:06 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 12:31:06 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=831ba4ac7f16d042d93f742106b63d3757d7bbe34ef58ea6" for 127.0.0.1 at 2013-06-08 12:31:18 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"831ba4ac7f16d042d93f742106b63d3757d7bbe34ef58ea6"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-08 12:32:30 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-08 12:32:34 +0200
+Processing by SessionsController#new as HTML
+Redirected to http://127.0.0.1:3000/auth/github
+Completed 302 Found in 1ms
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2013-06-08 12:32:34 +0200
+
+
+Started GET "/oauth?error=redirect_uri_mismatch&state=9f6e2d0ed6f719bd5639558e3547a3c42a36e22d20c1fade" for 127.0.0.1 at 2013-06-08 12:32:37 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "state"=>"9f6e2d0ed6f719bd5639558e3547a3c42a36e22d20c1fade"}
+Completed 500 Internal Server Error in 27ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started GET "/oauth/" for 127.0.0.1 at 2013-06-08 12:33:45 +0200
+Processing by SessionsController#create as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:9:in `block in find_or_create_from_auth_hash'
+  app/models/user.rb:8:in `find_or_create_from_auth_hash'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/pawel/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
