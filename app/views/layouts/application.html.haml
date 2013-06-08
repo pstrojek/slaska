@@ -31,7 +31,7 @@
               %li= link_to "Nasze menu", dinners_path
 
               -if current_user.nil?
-                %li= link_to "Zaloguj się", new_session_path
+                %li= link_to "Zaloguj się", login_path
               -else
                 %li= link_to "Wyloguj się", logout_path
 
