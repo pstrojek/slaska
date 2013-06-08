@@ -1,5 +1,6 @@
 Slaska::Application.routes.draw do
   get '/login' => 'sessions#new'
+  resources :dinners
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
