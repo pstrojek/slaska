@@ -29,7 +29,11 @@
           .container.nav-collapse
             %ul.nav
               %li= link_to "Nasze menu", "/dinners"
-              %li= link_to "Zaloguj się", "/login"
+
+              -if current_user.nil?
+                %li= link_to "Zaloguj się", "/login"
+              -else
+                %li= link_to "Wyloguj się", "/logout"
 
     .container-fluid
 
