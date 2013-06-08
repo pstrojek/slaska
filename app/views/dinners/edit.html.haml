@@ -1,0 +1,5 @@
+= form_tag dinner_path(dinner), method: :put do 
+  = label_tag :name
+  = text_field_tag "dinner[name]", dinner.name
+  %br
+  = submit_tag
