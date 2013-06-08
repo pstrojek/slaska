@@ -1,5 +1,6 @@
 - orders.each do |o|
   = o.id
+  = o.status
   - o.dinners.each do |d|
     = d.name
     = link_to 'Edit', edit_order_path(o)
