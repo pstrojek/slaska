@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe OrdersController do
 
+
   context '#update' do
     it 'renders edit if save successful' do
       subject.order.stub(:save).and_return(true)
@@ -18,3 +19,4 @@ describe OrdersController do
     end
   end
 end
+

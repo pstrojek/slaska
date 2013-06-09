@@ -5,3 +5,4 @@ describe Order do
     build(:order, dinners: []).should have(1).error_on(:dinners)
   end
 end
+
