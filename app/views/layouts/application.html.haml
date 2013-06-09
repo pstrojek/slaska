@@ -25,12 +25,9 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href=root_url) Slaska
+          = link_to "Śląska", root_path, class: :brand
           .container.nav-collapse
-            %ul.nav
-              -unless current_user.nil?
-                %li= link_to "Nasze menu", dinners_path
-
+            %ul.nav.pull-right
               -if current_user.nil?
                 %li= link_to "Zaloguj się", login_path
               -else
@@ -44,14 +41,14 @@
             .well.sidebar-nav
               %ul.nav.nav-list
                 %li.nav-header Sidebar
-                
+
                 %li= link_to "Lista obiadów", dinners_path
                 %li= link_to "Złóż zamówienie", new_order_path
                 %li= link_to "Twoje zamówienia", orders_path
         .span9
           = bootstrap_flash
           = yield
-    
+
       %footer
         %p &copy; Netguru Workshops 2013
     /

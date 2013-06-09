@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-skip_before_filter :authorize_user, :only => [:index]
+  skip_before_filter :authorize_user, :only => [:index]
 
   def index
 
