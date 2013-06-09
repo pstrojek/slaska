@@ -3,5 +3,4 @@ class Dinner
   field :name, type: String
 
   validates :name, length: { in: 3..100 }, uniqueness: true
-
 end

@@ -20,7 +20,11 @@ group :development do
 end
 
 group :development, :test do
+<<<<<<< Updated upstream
   gem 'pry'
+=======
+	gem 'pry'
+>>>>>>> Stashed changes
 end
 
 group :assets do
@@ -29,6 +33,14 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+	gem 'rspec'
+	gem 'rspec-rails'
+	gem 'database_cleaner'
+	gem 'mongoid-rspec'
+	gem 'factory_girl_rails'
 end
 
 gem 'jquery-rails'

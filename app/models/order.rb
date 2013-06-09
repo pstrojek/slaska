@@ -4,9 +4,8 @@ class Order
   has_and_belongs_to_many :dinners, inverse_of: nil
   belongs_to :user
 
-  validates :status, inclusion: { in: [:waiting, :not_sent, :sent] }
+  validates :status, inclusion: {in: [:waiting, :not_sent, :sent]}
   validates :user, presence: true
-
   validate :validate_at_least_one_dinner
 
   protected
