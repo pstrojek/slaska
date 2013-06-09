@@ -1,1 +1,11 @@
-tu jakis content
+%h1 Welcome everybody!
+%p Lorem ipsum dolor sit amet.
+
+%hr
+
+%h4 Najpopularniejsze obiady
+%ul
+  - Dinner.get_top(10).each do |d, i|
+    %li= d
+
+
