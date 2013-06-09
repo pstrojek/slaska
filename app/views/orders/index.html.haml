@@ -1,8 +1,14 @@
-- orders.each do |o|
-  = o.id
-  = o.status
-  
-  - o.dinners.each do |d|
-    = d.name
-  = link_to 'Edit', edit_order_path(o)
-  %br
+%table.table.table-striped
+  %thead
+    %tr
+      %th Zamówienie
+      %th Status zamówienia
+      %th Opcje
+  %tbody
+    - orders.each do |o|
+      %tr
+        %td
+          - o.dinners.each do |d|
+            = d.name
+        %td= o.status
+        %td= link_to 'Edit', edit_order_path(o)

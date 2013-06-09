@@ -1,5 +1,12 @@
-- dinners.each do |d|
-  = d.name  
-  - if current_user.is_admin?
-    = link_to 'Edit', edit_dinner_path(d)
-    %br
+%table.table.table-striped
+  %thead
+    %tr
+      %th Danie
+      %th
+  %tbody
+    - dinners.each do |d|
+      %tr
+        %td= d.name
+        %td
+          - if current_user.is_admin?
+            = link_to 'Edit', edit_dinner_path(d)
