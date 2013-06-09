@@ -1,8 +1,8 @@
 Slaska::Application.routes.draw do
   get '/login' => 'sessions#new'
-  get '/logout' => 'sessions#delete'
+  get '/logout' => 'sessions#destroy'
   get '/auth/github/callback' => 'sessions#create'
-  get '/' => 'home#index'
+  root to: 'home#index'
 
   resources :dinners
   resources :orders

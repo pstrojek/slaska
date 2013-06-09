@@ -1,14 +1,15 @@
 require 'spec_helper'
 
+
 describe User do 
   
   describe 'document' do
+
     it { should be_timestamped_document }
     it { should validate_length_of(:name).within(1..100) }
     it { should have_fields(:name, :uid, :provider).of_type(String) }
     it { should have_fields(:admin).of_type(Boolean) }
   end
-
 
   let(:auth_hash) {
     {
@@ -33,3 +34,4 @@ describe User do
     end
   end
 end
+
