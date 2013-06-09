@@ -5,12 +5,12 @@ describe SessionsController do
   context "#create" do
     before do
       request.env['omniauth.auth'] = {
-                                        'provider' => 'rspec',
-                                        'uid' => '12345678',
-                                        'info' => {
-                                          'name' => 'John Smith',
-                                        }
-                                      }
+          'provider' => 'rspec',
+          'uid' => '12345678',
+          'info' => {
+              'name' => 'John Smith',
+          }
+      }
     end
 
     let!(:user) { create(:user) }
