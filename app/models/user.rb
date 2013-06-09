@@ -7,7 +7,7 @@ class User
   field :provider, type: String
   field :admin, type: Boolean, default: false
 
-  validates :name, length: { in: 1..100 }
+  validates :name, length: { in: 0..100 }, allow_blank: true
 
   def self.find_or_create_from_auth_hash(auth_hash)
     user = find_or_initialize_by(provider: auth_hash["provider"], uid: auth_hash["uid"])
