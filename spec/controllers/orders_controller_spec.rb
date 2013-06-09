@@ -34,14 +34,14 @@ describe OrdersController do
       subject.should_receive(:redirect_to).with(orders_path)
     end
 
+
     it 'redirects to orders_path if save failed' do
       subject.order.stub(:save).and_return(false)
       subject.should_receive(:render).with(:edit)
     end
 
-    after(:each) do
+    after(:each) do 
       subject.update
     end
   end
 end
-

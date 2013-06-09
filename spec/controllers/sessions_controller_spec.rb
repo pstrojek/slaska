@@ -5,11 +5,11 @@ describe SessionsController do
   context "#create" do
     before do
       request.env['omniauth.auth'] = {
-          'provider' => 'rspec',
-          'uid' => '12345678',
-          'info' => {
-              'name' => 'John Smith',
-          }
+        'provider' => 'rspec',
+        'uid' => '12345678',
+        'info' => {
+          'name' => 'John Smith'
+        }
       }
     end
 
@@ -25,5 +25,11 @@ describe SessionsController do
       response.should redirect_to(root_path)
     end
   end
-end
 
+  context '#new' do
+    it 'redirects to new path' do
+      get :new
+      response.should redirect_to('/auth/github')
+    end
+  end
+end
