@@ -1,8 +1,7 @@
 = form_tag orders_path do 
   = label_tag 'Dinners'
-  - order.dinners.each do |d|
-    = select_tag "order[dinner_ids][]", options_from_collection_for_select(dinners.all, "id", "name", d.id)
-  = select_tag "order[dinner_ids][]", options_from_collection_for_select(dinners.all, "id", "name")
+  - order.dinners.each_with_index do |d, i|
+    = select_tag "order[dinner_ids][#{i}]", options_from_collection_for_select(dinners.all, "id", "name", d.id)
   %br
   = submit_tag 'Add', name: :form_action
   = submit_tag 'Finish', name: :form_action

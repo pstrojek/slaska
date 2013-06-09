@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    self.order.dinners.new
   end
 
   def new
@@ -30,6 +31,7 @@ class OrdersController < ApplicationController
   end
 
   def update
+    order.dinner_ids = params[:order][:dinner_ids].values
     if order.save
       redirect_to orders_path
     else
