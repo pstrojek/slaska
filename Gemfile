@@ -1,13 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-
 gem 'rails', '3.2.13'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'omniauth-openid', :git => 'git://github.com/intridea/omniauth-openid.git'
 gem 'konf'
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "mongoid"
 
@@ -20,18 +17,16 @@ gem 'decent_exposure'
 
 group :development do
   gem "better_errors"
+end
+
+group :development, :test do
   gem 'pry'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
 
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -47,3 +42,19 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

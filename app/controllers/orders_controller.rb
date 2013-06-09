@@ -5,15 +5,12 @@ class OrdersController < ApplicationController
   expose(:order)
 
   def index
-
   end
 
   def show
-    
   end
 
   def new
-    
   end
 
   def create
@@ -27,16 +24,12 @@ class OrdersController < ApplicationController
     else
       render :new
     end
-    # params[:order][:dinners]
   end
 
   def edit
-    
   end
 
   def update
-
-
     if order.save
       redirect_to orders_path
     else
@@ -45,6 +38,7 @@ class OrdersController < ApplicationController
   end
 
   protected
+
   def autorization_admin_or_owner
     if !current_user.is_admin? && order.user != current_user
       flash[:error] = "Access Denied"
