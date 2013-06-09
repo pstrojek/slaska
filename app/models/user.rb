@@ -7,11 +7,12 @@ class User
   field :admin, type: Boolean, default: false
 
   def self.find_or_create_from_auth_hash(auth_hash)
-  	create! do |user|
-        user.provider = auth_hash["provider"]
-        user.uid = auth_hash["uid"]
-        user.name = auth_hash["info"]["name"]
+    user = find_or_initialize_by(provider: auth_hash["provider"], uid: auth_hash["uid"])
+    if !user.persisted?
+      user.name = auth_hash["info"]["name"]
+      user.save
     end
+    user
   end
 
   def is_admin?
